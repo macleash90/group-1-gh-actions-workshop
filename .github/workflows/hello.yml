@@ -2,6 +2,8 @@ name: Hello World Training Workflow
 
 on:
   workflow_dispatch:
+  issues:
+    types: [opened, edited]
 
 jobs:
   greet:
@@ -16,6 +18,6 @@ jobs:
           echo "Hello $MY_ENV"
           echo "Hello $GITHUB_ACTOR"
         # List all files in the current directory for comparison before and after actions/checkout@v5.
-      - run: ls -l
-      - uses: actions/checkout@v5
-      - run: ls -l
+      #- run: ls -l
+      #- uses: actions/checkout@v5
+      #- run: ls -l
